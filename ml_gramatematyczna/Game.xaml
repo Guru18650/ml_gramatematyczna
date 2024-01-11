@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ml_gramatematyczna.Game"
+             Title="Gra">
+    <VerticalStackLayout Margin="10">
+        <Grid Margin="0,50,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" x:Name="l1L" Text=" 1 " HorizontalOptions="End" FontSize="35"/>
+            <Label Grid.Column="1" x:Name="sign" Text=" X " HorizontalOptions="Center" FontSize="35"/>
+            <Label Grid.Column="2" x:Name="l2L" Text=" 2 " HorizontalOptions="Start" FontSize="35"/>
+        </Grid>
+        <Entry Keyboard="Numeric" x:Name="answr" Placeholder="Odpowiedź" HorizontalTextAlignment="Center" Margin="20"></Entry>
+        <Button Text="Zatwierdź" Clicked="Button_Clicked" x:Name="confirmB"/>
+
+        <Grid Margin="0,50,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Text="Dobrze" TextColor="Green" HorizontalOptions="Center" FontSize="25"/>
+            <Label Grid.Column="1" Grid.Row="0" Text="Źle" TextColor="Red" HorizontalOptions="Center" FontSize="25"/>
+            <Label Grid.Column="0" Grid.Row="1" Text="0" x:Name="goodL" TextColor="Green" HorizontalOptions="Center" FontSize="25"/>
+            <Label Grid.Column="1" Grid.Row="1" Text="0" x:Name="badL" TextColor="Red" HorizontalOptions="Center" FontSize="25"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

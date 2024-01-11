@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ml_gramatematyczna.MainPage"
+             Title="Gra Matematyczna">
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Ilość powtórzeń" HorizontalOptions="Center" FontSize="18"/>
+        <Entry Text="10" Keyboard="Numeric" x:Name="repsE"></Entry>
+        <Label Text="Poziom trudności" HorizontalOptions="Center" FontSize="18" Margin="5"/>
+        <Slider Minimum="1" Maximum="3" Margin="0,10,0,0" x:Name="sldr" ValueChanged="sldr_ValueChanged" WidthRequest="270"></Slider>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Text="Łatwy" HorizontalOptions="Center"></Label>
+            <Label Grid.Column="1" Text="Średni" HorizontalOptions="Center"></Label>
+            <Label Grid.Column="2" Text="Trudny" HorizontalOptions="Center"></Label>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackLayout HorizontalOptions="End" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="0" Grid.Row="0">
+                <Label Text="Dodawanie" VerticalOptions="Center" />
+                <CheckBox IsChecked="true" x:Name="dodawanie"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="1" Grid.Row="0">
+                <CheckBox IsChecked="true" x:Name="odejmowanie"/>
+                <Label Text="Odejmowanie" VerticalOptions="Center" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="End" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="0" Grid.Row="1">
+                <Label Text="Mnożenie" VerticalOptions="Center" />
+                <CheckBox IsChecked="true" x:Name="mnozenie"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Start" Orientation="Horizontal" VerticalOptions="Start"  Grid.Column="1" Grid.Row="1">
+                <CheckBox IsChecked="true" x:Name="dzielenie"/>
+                <Label Text="Dzielenie" VerticalOptions="Center" />
+            </StackLayout>
+        </Grid>
+        <Button Text="Uruchom" Margin="10" x:Name="st" Clicked="st_Clicked"/>
+    </VerticalStackLayout>
+
+</ContentPage>
